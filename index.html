@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <title>María Astro Coach – Astrología y Coaching Ontológico</title>
+    <meta name="description" content="Acompañamiento en el proceso del Ser a través de Carta Natal, Revolución Solar y Coaching Ontológico. Sesiones online con María Inés Belvedere.">
+    <meta name="theme-color" content="#6d4c9e">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='52' font-size='52'%3E%E2%9C%A8%3C/text%3E%3C/svg%3E">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Styles/main.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="#inicio" class="logo-container" aria-label="Inicio - María Astro Coach">
+                <img src="Imgs/imagen astrologa.png" alt="" class="logo">
+                <span class="logo-text">María Astro Coach</span>
+            </a>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="main-nav" id="main-nav" aria-label="Menú principal">
+                <ul>
+                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                    <li><a href="#proceso" class="nav-link">Cómo funciona</a></li>
+                    <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+                    <li><a href="#faq" class="nav-link">Preguntas</a></li>
+                    <li><a href="Views/contacto.html" class="nav-link nav-cta">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Hero -->
+        <section id="inicio" class="hero">
+            <div class="hero-stars" aria-hidden="true"></div>
+            <div class="container hero-inner">
+                <span class="eyebrow"><i class="fas fa-sparkles"></i> Astrología · Coaching Ontológico</span>
+                <h1>Un viaje de autodescubrimiento <span class="accent">guiado por las estrellas</span></h1>
+                <p class="hero-lead">
+                    Encontrá claridad y dirección a través de la astrología y el coaching ontológico.
+                    Sesiones online personalizadas para acompañarte en tu camino evolutivo.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#servicios" class="btn btn-primary">Ver servicios</a>
+                    <a href="Views/contacto.html" class="btn btn-ghost">Agendar consulta</a>
+                </div>
+                <ul class="hero-highlights">
+                    <li><i class="fas fa-video"></i> 100% online (Zoom o WhatsApp)</li>
+                    <li><i class="fas fa-clock"></i> Sesiones de 60 a 90 min</li>
+                    <li><i class="fas fa-heart"></i> +10 años de experiencia</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Servicios -->
+        <section id="servicios" class="services section">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-eyebrow">Servicios</span>
+                    <h2 class="section-title">¿Qué te ofrezco?</h2>
+                    <p class="section-subtitle">Tres caminos complementarios para conocerte, comprenderte y avanzar con propósito.</p>
+                </header>
+
+                <div class="services-grid">
+
+                    <!-- Carta Natal -->
+                    <article class="service-card">
+                        <div class="service-icon"><i class="fas fa-moon"></i></div>
+                        <h3>Carta Natal</h3>
+                        <p class="service-tagline">Conocé tu mapa energético de origen.</p>
+                        <p class="service-desc">
+                            Lectura de las energías presentes en tu momento de nacimiento.
+                            Descubrí tus dones, desafíos y patrones que te acompañan a lo largo de la vida.
+                        </p>
+                        <ul class="service-meta">
+                            <li><i class="fas fa-clock"></i> 60 a 90 minutos</li>
+                            <li><i class="fas fa-laptop"></i> Online · Zoom o WhatsApp</li>
+                            <li><i class="fas fa-user"></i> Sesión individual</li>
+                        </ul>
+                        <a href="Views/contacto.html" class="service-link">Reservar sesión <i class="fas fa-arrow-right"></i></a>
+                    </article>
+
+                    <!-- Revolución Solar -->
+                    <article class="service-card service-card--featured">
+                        <span class="card-badge">Más elegida</span>
+                        <div class="service-icon"><i class="fas fa-sun"></i></div>
+                        <h3>Revolución Solar</h3>
+                        <p class="service-tagline">Tu pronóstico anual, de cumple a cumple.</p>
+                        <p class="service-desc">
+                            Exploramos qué energías te acompañarán este nuevo año personal,
+                            relacionándolas con tu carta natal para que las aproveches en tu camino evolutivo.
+                        </p>
+                        <ul class="service-meta">
+                            <li><i class="fas fa-clock"></i> 60 a 90 minutos</li>
+                            <li><i class="fas fa-laptop"></i> Online · Zoom o WhatsApp</li>
+                            <li><i class="fas fa-calendar"></i> Ideal cerca de tu cumpleaños</li>
+                        </ul>
+                        <a href="Views/contacto.html" class="service-link">Reservar sesión <i class="fas fa-arrow-right"></i></a>
+                    </article>
+
+                    <!-- Coaching Ontológico -->
+                    <article class="service-card">
+                        <div class="service-icon"><i class="fas fa-heart"></i></div>
+                        <h3>Coaching Ontológico</h3>
+                        <p class="service-tagline">Transformá tu observador, transformá tu vida.</p>
+                        <p class="service-desc">
+                            A través de preguntas poderosas generamos un cambio de mirada
+                            que habilita nuevas acciones para alcanzar los objetivos que te proponés.
+                        </p>
+                        <ul class="service-meta">
+                            <li><i class="fas fa-clock"></i> 60 a 90 minutos</li>
+                            <li><i class="fas fa-laptop"></i> Online · Zoom o WhatsApp</li>
+                            <li><i class="fas fa-rotate"></i> Procesos individuales</li>
+                        </ul>
+                        <a href="Views/contacto.html" class="service-link">Reservar sesión <i class="fas fa-arrow-right"></i></a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Cómo funciona -->
+        <section id="proceso" class="process section section--alt">
+            <div class="container">
+                <header class="section-header">
+                    <span class="section-eyebrow">Cómo funciona</span>
+                    <h2 class="section-title">Tu sesión, paso a paso</h2>
+                    <p class="section-subtitle">Un proceso simple, claro y a tu medida.</p>
+                </header>
+
+                <ol class="process-steps">
+                    <li class="process-step">
+                        <span class="step-number">1</span>
+                        <h3>Escribime</h3>
+                        <p>Contame qué te moviliza por WhatsApp o email. Resolvemos juntas tus dudas y elegimos el servicio ideal.</p>
+                    </li>
+                    <li class="process-step">
+                        <span class="step-number">2</span>
+                        <h3>Coordinamos</h3>
+                        <p>Acordamos día, horario y forma de pago. Te envío los datos que necesito para preparar tu sesión.</p>
+                    </li>
+                    <li class="process-step">
+                        <span class="step-number">3</span>
+                        <h3>Vivimos la sesión</h3>
+                        <p>Nos encontramos online por Zoom o WhatsApp. Después recibís un resumen para acompañar tu proceso.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Sobre Mí -->
+        <section id="sobre-mi" class="about section">
+            <div class="container about-grid">
+                <div class="about-image">
+                    <img src="Imgs/imagen astrologa.png" alt="Retrato de María Inés Belvedere">
+                    <div class="about-image-glow" aria-hidden="true"></div>
+                </div>
+                <div class="about-text">
+                    <span class="section-eyebrow">Sobre mí</span>
+                    <h2 class="section-title section-title--left">Hola, soy María Inés Belvedere</h2>
+                    <p class="lead">
+                        Astróloga y coach ontológica. Me gusta definirme como
+                        <strong>acompañante en el proceso del Ser</strong>.
+                    </p>
+                    <p>
+                        Hace más de 10 años, a partir de cambios profundos en mi vida, comencé a estudiar
+                        el lenguaje de la astrología, el simbolismo del tarot y el coaching ontológico.
+                    </p>
+                    <p>Estas herramientas acompañan en el camino del:</p>
+                    <ul class="about-features">
+                        <li><i class="fas fa-star"></i> Autoconocimiento</li>
+                        <li><i class="fas fa-star"></i> Expansión de conciencia</li>
+                        <li><i class="fas fa-star"></i> Reflexión</li>
+                        <li><i class="fas fa-star"></i> Desarrollo personal</li>
+                    </ul>
+                    <p>Re-diseñando la ruta en el viaje del alma, el viaje del héroe que somos.</p>
+                    <a href="Views/contacto.html" class="btn btn-primary">Agendar una consulta</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="faq section section--alt">
+            <div class="container faq-container">
+                <header class="section-header">
+                    <span class="section-eyebrow">Preguntas frecuentes</span>
+                    <h2 class="section-title">Resolvé tus dudas</h2>
+                </header>
+
+                <div class="faq-list">
+                    <details class="faq-item">
+                        <summary>¿Necesito saber algo de astrología para hacer una sesión?</summary>
+                        <p>No. Las sesiones están pensadas para que cualquier persona pueda comprenderlas, sin conocimientos previos. Yo te guío en cada paso.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>¿Qué información necesitás para mi Carta Natal o Revolución Solar?</summary>
+                        <p>Tu fecha de nacimiento, hora exacta y lugar. Si no tenés la hora, te oriento sobre cómo conseguirla.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>¿Cómo son las sesiones?</summary>
+                        <p>Son 100% online, por Zoom o videollamada de WhatsApp. Duran entre 60 y 90 minutos, en un espacio íntimo y respetuoso.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>¿Cómo agendo una sesión?</summary>
+                        <p>Escribime por WhatsApp o email. Te respondo a la brevedad para coordinar día, horario y forma de pago.</p>
+                    </details>
+                    <details class="faq-item">
+                        <summary>¿Puedo regalar una sesión?</summary>
+                        <p>¡Sí! Las sesiones pueden regalarse. Contactame y armamos juntas el regalo perfecto.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA final -->
+        <section class="cta-banner">
+            <div class="container cta-inner">
+                <h2>¿Lista para comenzar tu viaje?</h2>
+                <p>Te acompaño a transitar tu propio camino con consciencia y herramientas concretas.</p>
+                <a href="Views/contacto.html" class="btn btn-light">Quiero agendar una sesión</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-col footer-brand">
+                <a href="#inicio" class="footer-brand-link">
+                    <img src="Imgs/imagen astrologa.png" alt="" class="footer-logo">
+                    <span class="footer-brand-name">María Astro Coach</span>
+                </a>
+                <p class="footer-tagline">Acompañante en el proceso del Ser. Astrología y coaching ontológico para tu camino evolutivo.</p>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Navegación</h4>
+                <nav class="footer-nav" aria-label="Pie de página">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#servicios">Servicios</a>
+                    <a href="#sobre-mi">Sobre mí</a>
+                    <a href="#faq">Preguntas</a>
+                </nav>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-title">Contacto</h4>
+                <div class="footer-contact">
+                    <a href="https://wa.me/5491563504385" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> +54 9 11 6350-4385</a>
+                    <a href="mailto:Mariainesb@hotmail.com.ar"><i class="fas fa-envelope"></i> Mariainesb@hotmail.com.ar</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2025 María Astro Coach. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
