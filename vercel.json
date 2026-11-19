@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/Views/contacto.html", "destination": "/#consulta", "permanent": true },
+    { "source": "/Views/contacto", "destination": "/#consulta", "permanent": true }
+  ]
+}

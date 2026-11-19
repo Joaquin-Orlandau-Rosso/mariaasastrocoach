@@ -2,165 +2,257 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <title>María Astro Coach – Astrología y Coaching Ontológico</title>
-    <meta name="description" content="Acompañamiento en el proceso del Ser a través de Carta Natal, Revolución Solar y Coaching Ontológico. Sesiones online con María Inés Belvedere.">
-    <meta name="theme-color" content="#6d4c9e">
-    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ctext y='52' font-size='52'%3E%E2%9C%A8%3C/text%3E%3C/svg%3E">
+    <title>María Astro Coach · Astrología y Coaching Ontológico online</title>
+    <meta name="description" content="Carta Natal, Revolución Solar y Coaching Ontológico con María Inés Belvedere. Sesiones online por Zoom o WhatsApp, de 60 a 90 minutos.">
+    <link rel="canonical" href="https://mariaasastrocoach.vercel.app/">
+    <meta name="theme-color" content="#1d4351">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_AR">
+    <meta property="og:site_name" content="María Astro Coach">
+    <meta property="og:title" content="María Astro Coach · Astrología y Coaching Ontológico">
+    <meta property="og:description" content="Carta Natal, Revolución Solar y Coaching Ontológico. Sesiones online con María Inés Belvedere.">
+    <meta property="og:url" content="https://mariaasastrocoach.vercel.app/">
+    <meta property="og:image" content="https://mariaasastrocoach.vercel.app/Imgs/og.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Logo de María Astro Coach: una flor de loto dentro de una luna creciente">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="Imgs/emblema.webp" type="image/webp">
     <link rel="stylesheet" href="Styles/main.css">
+    <script>document.documentElement.classList.add('js');</script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "María Astro Coach",
+        "description": "Astrología y coaching ontológico: Carta Natal, Revolución Solar y procesos de coaching. Sesiones online.",
+        "url": "https://mariaasastrocoach.vercel.app/",
+        "image": "https://mariaasastrocoach.vercel.app/Imgs/og.jpg",
+        "logo": "https://mariaasastrocoach.vercel.app/apple-touch-icon.png",
+        "telephone": "+5491163504385",
+        "email": "Mariainesb@hotmail.com.ar",
+        "areaServed": "Online",
+        "founder": {
+            "@type": "Person",
+            "name": "María Inés Belvedere",
+            "jobTitle": "Astróloga y coach ontológica"
+        },
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Sesiones",
+            "itemListElement": [
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Carta Natal" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Revolución Solar" } },
+                { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Coaching Ontológico" } }
+            ]
+        }
+    }
+    </script>
 </head>
 <body>
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+    <!-- Íconos (se usan con <use href="#i-...">) -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <symbol id="i-whatsapp" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></symbol>
+        <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+        <symbol id="i-reloj" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+        <symbol id="i-video" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/></symbol>
+        <symbol id="i-flecha" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+        <symbol id="i-regalo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13"/><path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/><path d="M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></symbol>
+        <symbol id="i-calendario" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10h18V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h7"/><path d="M8 2v4"/><path d="M16 2v4"/><path d="M21.29 14.7a2.43 2.43 0 0 0-2.65-.52c-.3.12-.57.3-.8.53l-.34.34-.35-.34a2.43 2.43 0 0 0-2.65-.53c-.3.12-.56.3-.79.53-.95.94-1 2.53.2 3.74L17.5 22l3.6-3.55c1.2-1.21 1.14-2.8.19-3.74Z"/></symbol>
+        <symbol id="i-persona" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+        <symbol id="i-proceso" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></symbol>
+        <symbol id="i-destello" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0c.6 6.6 5.4 11.4 12 12-6.6.6-11.4 5.4-12 12-.6-6.6-5.4-11.4-12-12C6.6 11.4 11.4 6.6 12 0Z"/></symbol>
+    </svg>
 
     <!-- Header -->
-    <header class="header" id="header">
-        <div class="container header-inner">
-            <a href="#inicio" class="logo-container" aria-label="Inicio - María Astro Coach">
-                <img src="Imgs/imagen astrologa.png" alt="" class="logo">
-                <span class="logo-text">María Astro Coach</span>
+    <header class="cabecera" id="cabecera">
+        <div class="contenedor cabecera-fila">
+            <a href="#inicio" class="marca" aria-label="María Astro Coach, ir al inicio">
+                <img src="Imgs/logo-128.webp" alt="" width="40" height="40" class="marca-sello">
+                <span class="marca-nombre">María Astro Coach</span>
             </a>
 
-            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-nav">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="menu-boton" id="menu-boton" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+                <span></span><span></span>
             </button>
 
-            <nav class="main-nav" id="main-nav" aria-label="Menú principal">
+            <nav class="menu" id="menu" aria-label="Menú principal">
                 <ul>
-                    <li><a href="#inicio" class="nav-link">Inicio</a></li>
-                    <li><a href="#servicios" class="nav-link">Servicios</a></li>
-                    <li><a href="#proceso" class="nav-link">Cómo funciona</a></li>
-                    <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
-                    <li><a href="#faq" class="nav-link">Preguntas</a></li>
-                    <li><a href="Views/contacto.html" class="nav-link nav-cta">Contacto</a></li>
+                    <li><a href="#servicios" class="menu-link">Servicios</a></li>
+                    <li><a href="#proceso" class="menu-link">Cómo funciona</a></li>
+                    <li><a href="#sobre-mi" class="menu-link">Sobre mí</a></li>
+                    <li><a href="#preguntas" class="menu-link">Preguntas</a></li>
+                    <li><a href="#consulta" class="menu-link menu-reservar">Reservar sesión</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main>
+    <main id="contenido">
 
         <!-- Hero -->
-        <section id="inicio" class="hero">
-            <div class="hero-stars" aria-hidden="true"></div>
-            <div class="container hero-inner">
-                <span class="eyebrow"><i class="fas fa-sparkles"></i> Astrología · Coaching Ontológico</span>
-                <h1>Bienvenidos a un viaje <span class="accent">de autodescubrimiento</span></h1>
-                <p class="hero-lead">
-                    Encontrá claridad y dirección a través de la astrología y el coaching ontológico.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#servicios" class="btn btn-primary">Ver servicios</a>
-                    <a href="Views/contacto.html" class="btn btn-ghost">Contactar</a>
+        <section id="inicio" class="hero" data-capas data-mouse="18">
+            <div class="cielo" aria-hidden="true">
+                <div class="cielo-capa" data-profundidad="0.12"><svg class="estrellas" data-estrellas="lejanas"></svg></div>
+                <div class="cielo-capa" data-profundidad="0.3"><svg class="estrellas" data-estrellas="cercanas"></svg></div>
+            </div>
+
+            <div class="contenedor hero-grilla">
+                <div class="hero-texto">
+                    <p class="hero-quien" data-entra>María Inés Belvedere · Astróloga y coach ontológica</p>
+                    <h1 data-texto-entra data-orden="1">Bienvenidos a un viaje de autodescubrimiento</h1>
+                    <p class="hero-bajada" data-entra data-orden="3">
+                        Encontrá claridad y dirección a través de la astrología y el coaching ontológico.
+                    </p>
+                    <div class="hero-acciones" data-entra data-orden="4">
+                        <a href="#consulta" class="btn btn-crema">Reservá tu sesión</a>
+                        <a href="#servicios" class="btn btn-linea">Ver servicios</a>
+                    </div>
+                    <ul class="hero-datos" data-entra data-orden="5">
+                        <li><svg class="ico" aria-hidden="true"><use href="#i-video"/></svg> Sesiones 100% online</li>
+                        <li><svg class="ico" aria-hidden="true"><use href="#i-reloj"/></svg> De 60 a 90 minutos</li>
+                        <li><svg class="ico" aria-hidden="true"><use href="#i-destello"/></svg> Más de 10 años de experiencia</li>
+                    </ul>
                 </div>
-                <ul class="hero-highlights">
-                    <li><i class="fas fa-video"></i> Todas las sesiones son 100% online</li>
-                    <li><i class="fas fa-clock"></i> Sesiones de 60 a 90 minutos</li>
-                    <li><i class="fas fa-heart"></i> +10 años de experiencia</li>
-                </ul>
+
+                <div class="hero-emblema" aria-hidden="true">
+                    <div class="hero-emblema-capa" data-profundidad="-0.25">
+                        <div class="hero-emblema-entra" data-entra data-orden="2">
+                            <svg class="astrolabio" viewBox="0 0 600 600" data-astrolabio></svg>
+                            <img class="emblema" src="Imgs/emblema.webp" width="640" height="640" alt="" fetchpriority="high" decoding="async">
+                        </div>
+                    </div>
+                    <div class="hero-destellos" data-profundidad="0.6">
+                        <svg class="destello d1"><use href="#i-destello"/></svg>
+                        <svg class="destello d2"><use href="#i-destello"/></svg>
+                        <svg class="destello d3"><use href="#i-destello"/></svg>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Servicios -->
-        <section id="servicios" class="services section">
-            <div class="container">
-                <header class="section-header">
-                    <span class="section-eyebrow">Servicios</span>
-                    <h2 class="section-title">¿Qué te ofrezco?</h2>
-                    <p class="section-subtitle">Tres caminos complementarios para conocerte, comprenderte y avanzar con propósito.</p>
-                </header>
+        <section id="servicios" class="seccion servicios">
+            <div class="contenedor">
+                <div class="encabezado encabezado--partido">
+                    <h2 data-entra>¿Qué te ofrezco?</h2>
+                    <p data-entra data-orden="1">Tres caminos complementarios para conocerte, comprenderte y avanzar con propósito.</p>
+                </div>
 
-                <div class="services-grid">
-
-                    <!-- Carta Natal -->
-                    <article class="service-card">
-                        <div class="service-icon"><i class="fas fa-moon"></i></div>
-                        <h3>Carta Natal</h3>
-                        <p class="service-tagline">Conocé tu mapa energético de origen.</p>
-                        <p class="service-desc">
-                            La Carta Natal es una sesión donde se hace lectura de las energías
-                            en tu momento de nacimiento, que nos empiezan a hablar de vos
-                            y de tus desafíos durante toda tu vida.
-                        </p>
-                        <ul class="service-meta">
-                            <li><i class="fas fa-clock"></i> 60 a 90 minutos</li>
-                            <li><i class="fas fa-laptop"></i> Online · Zoom o WhatsApp</li>
-                            <li><i class="fas fa-user"></i> Sesión individual</li>
-                        </ul>
-                        <a href="Views/contacto.html" class="service-link">Reservar sesión <i class="fas fa-arrow-right"></i></a>
+                <div class="servicios-lista">
+                    <article class="servicio" data-entra>
+                        <svg class="servicio-glifo" viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="32" cy="32" r="28"/><circle cx="32" cy="32" r="21"/>
+                            <path d="M53 32h7M50.19 42.5l6.06 3.5M42.5 50.19l3.5 6.06M32 53v7M21.5 50.19 18 56.25M13.81 42.5 7.75 46M11 32H4M13.81 21.5 7.75 18M21.5 13.81 18 7.75M32 11V4M42.5 13.81 46 7.75M50.19 21.5l6.06-3.5"/>
+                            <path d="M32 53 13.81 21.5h36.38Z"/><circle cx="32" cy="32" r="1.6" fill="currentColor"/>
+                        </svg>
+                        <div class="servicio-titulo">
+                            <h3>Carta Natal</h3>
+                            <p class="servicio-frase">Conocé tu mapa energético de origen.</p>
+                        </div>
+                        <div class="servicio-cuerpo">
+                            <p>
+                                La Carta Natal es una sesión donde se hace lectura de las energías
+                                en tu momento de nacimiento, que nos empiezan a hablar de vos
+                                y de tus desafíos durante toda tu vida.
+                            </p>
+                            <ul class="servicio-datos">
+                                <li><svg class="ico" aria-hidden="true"><use href="#i-reloj"/></svg> 60 a 90 minutos</li>
+                                <li><svg class="ico" aria-hidden="true"><use href="#i-video"/></svg> Online · Zoom o WhatsApp</li>
+                                <li><svg class="ico" aria-hidden="true"><use href="#i-persona"/></svg> Sesión individual</li>
+                            </ul>
+                            <a href="#consulta" class="servicio-link" data-servicio="carta-natal">Reservar Carta Natal <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+                        </div>
                     </article>
 
-                    <!-- Revolución Solar -->
-                    <article class="service-card service-card--featured">
-                        <span class="card-badge">Más elegida</span>
-                        <div class="service-icon"><i class="fas fa-sun"></i></div>
-                        <h3>Revolución Solar</h3>
-                        <p class="service-tagline">Tu pronóstico anual, de cumple a cumple.</p>
-                        <p class="service-desc">
-                            En la Revolución Solar hablamos qué energías te van a acompañar
-                            desde este cumpleaños a tu próximo cumple, en relación a tu carta natal,
-                            para poder aprovecharlas en tu camino evolutivo personal.
-                        </p>
-                        <ul class="service-meta">
-                            <li><i class="fas fa-clock"></i> 60 a 90 minutos</li>
-                            <li><i class="fas fa-laptop"></i> Online · Zoom o WhatsApp</li>
-                            <li><i class="fas fa-calendar"></i> Ideal cerca de tu cumpleaños</li>
-                        </ul>
-                        <a href="Views/contacto.html" class="service-link">Reservar sesión <i class="fas fa-arrow-right"></i></a>
+                    <article class="servicio" data-entra>
+                        <svg class="servicio-glifo" viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="32" cy="32" r="27" stroke-dasharray="2 4.2"/>
+                            <circle cx="32" cy="32" r="9"/><circle cx="32" cy="32" r="1.6" fill="currentColor"/>
+                            <path d="M46 32h6M41.9 41.9l4.24 4.24M32 46v6M22.1 41.9l-4.24 4.24M18 32h-6M22.1 22.1l-4.24-4.24M32 18v-6M41.9 22.1l4.24-4.24"/>
+                            <circle cx="51.09" cy="12.91" r="2.6" fill="currentColor" stroke="none"/>
+                        </svg>
+                        <div class="servicio-titulo">
+                            <h3>Revolución Solar</h3>
+                            <p class="servicio-frase">Tu pronóstico anual, de cumple a cumple.</p>
+                        </div>
+                        <div class="servicio-cuerpo">
+                            <p>
+                                En la Revolución Solar hablamos qué energías te van a acompañar
+                                desde este cumpleaños a tu próximo cumple, en relación a tu carta natal,
+                                para poder aprovecharlas en tu camino evolutivo personal.
+                            </p>
+                            <ul class="servicio-datos">
+                                <li><svg class="ico" aria-hidden="true"><use href="#i-reloj"/></svg> 60 a 90 minutos</li>
+                                <li><svg class="ico" aria-hidden="true"><use href="#i-video"/></svg> Online · Zoom o WhatsApp</li>
+                                <li><svg class="ico" aria-hidden="true"><use href="#i-calendario"/></svg> Ideal cerca de tu cumpleaños</li>
+                            </ul>
+                            <a href="#consulta" class="servicio-link" data-servicio="revolucion-solar">Reservar Revolución Solar <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+                        </div>
                     </article>
 
-                    <!-- Coaching Ontológico -->
-                    <article class="service-card">
-                        <div class="service-icon"><i class="fas fa-heart"></i></div>
-                        <h3>Coaching Ontológico</h3>
-                        <p class="service-tagline">Cambiá tu observador, transformá tus acciones.</p>
-                        <p class="service-desc">
-                            El Coaching Ontológico son sesiones donde, mediante preguntas
-                            poderosas, podemos generar ese cambio de observador y realizar
-                            nuevas acciones para el logro de objetivos.
-                        </p>
-                        <ul class="service-meta">
-                            <li><i class="fas fa-clock"></i> 60 a 90 minutos</li>
-                            <li><i class="fas fa-laptop"></i> Online · Zoom o WhatsApp</li>
-                            <li><i class="fas fa-rotate"></i> Procesos individuales</li>
-                        </ul>
-                        <a href="Views/contacto.html" class="service-link">Reservar sesión <i class="fas fa-arrow-right"></i></a>
+                    <article class="servicio" data-entra>
+                        <svg class="servicio-glifo" viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M8 32c8-12 40-12 48 0-8 12-40 12-48 0Z"/>
+                            <circle cx="32" cy="32" r="7.5"/><circle cx="32" cy="32" r="2.6" fill="currentColor"/>
+                            <path d="M32 18v-7M22.5 19.5l-3-5.2M41.5 19.5l3-5.2M14.5 23.5l-4.4-3.6M49.5 23.5l4.4-3.6M32 46v7M22.5 44.5l-3 5.2M41.5 44.5l3 5.2"/>
+                        </svg>
+                        <div class="servicio-titulo">
+                            <h3>Coaching Ontológico</h3>
+                            <p class="servicio-frase">Cambiá tu observador, transformá tus acciones.</p>
+                        </div>
+                        <div class="servicio-cuerpo">
+                            <p>
+                                El Coaching Ontológico son sesiones donde, mediante preguntas
+                                poderosas, podemos generar ese cambio de observador y realizar
+                                nuevas acciones para el logro de objetivos.
+                            </p>
+                            <ul class="servicio-datos">
+                                <li><svg class="ico" aria-hidden="true"><use href="#i-reloj"/></svg> 60 a 90 minutos</li>
+                                <li><svg class="ico" aria-hidden="true"><use href="#i-video"/></svg> Online · Zoom o WhatsApp</li>
+                                <li><svg class="ico" aria-hidden="true"><use href="#i-proceso"/></svg> Procesos individuales</li>
+                            </ul>
+                            <a href="#consulta" class="servicio-link" data-servicio="coaching">Reservar Coaching <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a>
+                        </div>
                     </article>
-
                 </div>
             </div>
         </section>
 
         <!-- Cómo funciona -->
-        <section id="proceso" class="process section section--alt">
-            <div class="container">
-                <header class="section-header">
-                    <span class="section-eyebrow">Cómo funciona</span>
-                    <h2 class="section-title">Tu sesión, paso a paso</h2>
-                    <p class="section-subtitle">Un proceso simple, claro y a tu medida.</p>
-                </header>
+        <section id="proceso" class="seccion proceso">
+            <div class="contenedor">
+                <div class="encabezado">
+                    <h2 data-entra>Tu sesión, paso a paso</h2>
+                    <p data-entra data-orden="1">Un proceso simple, claro y a tu medida.</p>
+                </div>
 
-                <ol class="process-steps">
-                    <li class="process-step">
-                        <span class="step-number">1</span>
+                <ol class="constelacion" data-entra>
+                    <li class="paso">
+                        <svg class="paso-estrella" aria-hidden="true"><use href="#i-destello"/></svg>
                         <h3>Escribime</h3>
                         <p>Contame qué te moviliza por WhatsApp o email. Resolvemos juntas tus dudas y elegimos el servicio ideal.</p>
                     </li>
-                    <li class="process-step">
-                        <span class="step-number">2</span>
+                    <li class="paso">
+                        <svg class="paso-estrella" aria-hidden="true"><use href="#i-destello"/></svg>
                         <h3>Coordinamos</h3>
                         <p>Acordamos día, horario y forma de pago. Te envío los datos que necesito para preparar tu sesión.</p>
                     </li>
-                    <li class="process-step">
-                        <span class="step-number">3</span>
+                    <li class="paso">
+                        <svg class="paso-estrella" aria-hidden="true"><use href="#i-destello"/></svg>
                         <h3>Vivimos la sesión</h3>
                         <p>Nos encontramos online por Zoom o WhatsApp. Después recibís un resumen para acompañar tu proceso.</p>
                     </li>
@@ -168,117 +260,208 @@
             </div>
         </section>
 
-        <!-- Sobre Mí -->
-        <section id="sobre-mi" class="about section">
-            <div class="container about-grid">
-                <div class="about-image">
-                    <img src="Imgs/imagen astrologa.png" alt="Retrato de María Inés Belvedere">
-                    <div class="about-image-glow" aria-hidden="true"></div>
-                </div>
-                <div class="about-text">
-                    <span class="section-eyebrow">Sobre mí</span>
-                    <h2 class="section-title section-title--left">Hola, soy María Inés Belvedere</h2>
-                    <p class="lead">
+        <!-- Sobre mí -->
+        <section id="sobre-mi" class="seccion sobre-mi">
+            <div class="contenedor sobre-grilla">
+                <!-- Si María manda una foto suya, va acá en lugar del sello (retrato vertical, 4:5). -->
+                <figure class="sobre-sello" data-entra>
+                    <img src="Imgs/logo-128.webp" srcset="Imgs/logo-128.webp 128w, Imgs/logo-360.webp 360w, Imgs/logo-520.webp 520w" sizes="(max-width: 980px) 140px, 240px" alt="Sello de María Astro Coach: flor de loto dentro de una luna creciente" width="240" height="240" loading="lazy">
+                </figure>
+
+                <div class="sobre-texto">
+                    <h2 data-entra>Hola, soy María Inés Belvedere</h2>
+                    <p class="sobre-lead" data-entra data-orden="1">
                         Astróloga y coach ontológica. Me gusta definirme como
                         <strong>acompañante en el proceso del Ser</strong>.
                     </p>
-                    <p>
+                    <p data-entra data-orden="2">
                         Hace más de 10 años, a partir de cambios profundos en mi vida, comencé a estudiar
                         el lenguaje de la astrología, el simbolismo del tarot y el coaching ontológico.
                     </p>
-                    <p>Estas herramientas acompañan en el camino del:</p>
-                    <ul class="about-features">
-                        <li><i class="fas fa-star"></i> Autoconocimiento</li>
-                        <li><i class="fas fa-star"></i> Expansión de conciencia</li>
-                        <li><i class="fas fa-star"></i> Reflexión</li>
-                        <li><i class="fas fa-star"></i> Desarrollo personal</li>
+                    <p data-entra data-orden="3">Estas herramientas acompañan en el camino del:</p>
+                    <ul class="sobre-caminos" data-entra data-orden="3">
+                        <li>Autoconocimiento</li>
+                        <li>Expansión de conciencia</li>
+                        <li>Reflexión</li>
+                        <li>Desarrollo personal</li>
                     </ul>
-                    <p>Re-diseñando la ruta en el viaje del alma, el viaje del héroe que somos.</p>
-                    <a href="Views/contacto.html" class="btn btn-primary">Agendar una consulta</a>
+                    <a href="#consulta" class="btn btn-tinta" data-entra data-orden="4">Agendar una consulta</a>
                 </div>
+            </div>
+
+            <blockquote class="contenedor frase" data-entra>
+                <svg class="frase-destello" aria-hidden="true"><use href="#i-destello"/></svg>
+                <p>Re-diseñando la ruta en el viaje del alma, el viaje del héroe que somos.</p>
+            </blockquote>
+        </section>
+
+        <!-- Consulta -->
+        <section id="consulta" class="seccion consulta">
+            <div class="contenedor consulta-grilla">
+                <div class="consulta-intro">
+                    <h2 data-entra>¿Lista para comenzar tu viaje?</h2>
+                    <p data-entra data-orden="1">
+                        Escribime para más información sobre mis servicios o para agendar
+                        una consulta personalizada. Respondo a la brevedad.
+                    </p>
+                    <p class="consulta-ayuda" data-entra data-orden="2">
+                        Elegí la sesión y, si es de astrología, sumá tus datos de nacimiento:
+                        así ya los tengo para preparar tu encuentro.
+                    </p>
+
+                    <ul class="consulta-canales" data-entra data-orden="3">
+                        <li>
+                            <a href="https://wa.me/5491163504385" target="_blank" rel="noopener">
+                                <svg class="ico" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                                <span><strong>WhatsApp</strong> +54 9 11 6350-4385</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:Mariainesb@hotmail.com.ar">
+                                <svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>
+                                <span><strong>Email</strong> Mariainesb@hotmail.com.ar</span>
+                            </a>
+                        </li>
+                        <li class="consulta-regalo">
+                            <svg class="ico" aria-hidden="true"><use href="#i-regalo"/></svg>
+                            <span>Las sesiones también se pueden regalar.</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Arranca oculto: lo muestra main.js recién cuando el envío por WhatsApp está listo. -->
+                <form class="formulario" id="formulario" data-entra data-orden="1" novalidate hidden>
+                    <fieldset class="campo">
+                        <legend>¿Qué sesión te interesa?</legend>
+                        <div class="opciones">
+                            <label class="opcion"><input type="radio" name="servicio" value="carta-natal"><span>Carta Natal</span></label>
+                            <label class="opcion"><input type="radio" name="servicio" value="revolucion-solar"><span>Revolución Solar</span></label>
+                            <label class="opcion"><input type="radio" name="servicio" value="coaching"><span>Coaching Ontológico</span></label>
+                            <label class="opcion"><input type="radio" name="servicio" value="no-se"><span>Todavía no lo sé</span></label>
+                        </div>
+                    </fieldset>
+
+                    <div class="campo">
+                        <label for="f-nombre">Tu nombre</label>
+                        <input id="f-nombre" name="nombre" type="text" autocomplete="given-name" placeholder="Cómo te llamás">
+                    </div>
+
+                    <label class="tilde">
+                        <input type="checkbox" name="regalo" id="f-regalo">
+                        <span>Es para regalar</span>
+                    </label>
+
+                    <fieldset class="campo nacimiento" id="nacimiento" hidden>
+                        <legend id="nacimiento-titulo">Tus datos de nacimiento</legend>
+                        <div class="nacimiento-fila">
+                            <div class="campo">
+                                <label for="f-fecha">Fecha</label>
+                                <input id="f-fecha" name="fecha" type="date" min="1900-01-01">
+                            </div>
+                            <div class="campo">
+                                <label for="f-hora">Hora</label>
+                                <input id="f-hora" name="hora" type="time">
+                            </div>
+                        </div>
+                        <label class="tilde tilde--chica">
+                            <input type="checkbox" name="sin-hora" id="f-sin-hora">
+                            <span>No sé la hora exacta</span>
+                        </label>
+                        <div class="campo">
+                            <label for="f-lugar">Lugar</label>
+                            <input id="f-lugar" name="lugar" type="text" autocomplete="off" placeholder="Ciudad, provincia y país">
+                        </div>
+                    </fieldset>
+
+                    <div class="campo">
+                        <label for="f-mensaje">¿Algo que quieras contarme? <span class="opcional">(opcional)</span></label>
+                        <textarea id="f-mensaje" name="mensaje" rows="3" placeholder="Qué te moviliza, qué te gustaría trabajar…"></textarea>
+                    </div>
+
+                    <div class="vista-previa">
+                        <p class="vista-previa-titulo">Así le llega tu mensaje a María</p>
+                        <p class="vista-previa-texto" id="vista-previa" aria-live="polite"></p>
+                    </div>
+
+                    <div class="formulario-acciones">
+                        <button type="submit" class="btn btn-whatsapp">
+                            <svg class="ico" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+                            Enviar por WhatsApp
+                        </button>
+                        <a class="formulario-mail" id="enviar-mail" href="mailto:Mariainesb@hotmail.com.ar">o enviarlo por email</a>
+                    </div>
+                </form>
             </div>
         </section>
 
-        <!-- FAQ -->
-        <section id="faq" class="faq section section--alt">
-            <div class="container faq-container">
-                <header class="section-header">
-                    <span class="section-eyebrow">Preguntas frecuentes</span>
-                    <h2 class="section-title">Resolvé tus dudas</h2>
-                </header>
+        <!-- Preguntas -->
+        <section id="preguntas" class="seccion preguntas">
+            <div class="contenedor preguntas-grilla">
+                <div class="preguntas-intro">
+                    <h2 data-entra>Preguntas frecuentes</h2>
+                    <p data-entra data-orden="1">¿Te quedó otra duda? <a href="#consulta">Escribime</a> y lo hablamos.</p>
+                </div>
 
-                <div class="faq-list">
-                    <details class="faq-item">
+                <div class="preguntas-lista">
+                    <details class="pregunta" data-entra>
                         <summary>¿Necesito saber algo de astrología para hacer una sesión?</summary>
-                        <p>No. Las sesiones están pensadas para que cualquier persona pueda comprenderlas, sin conocimientos previos. Yo te guío en cada paso.</p>
+                        <div class="pregunta-respuesta"><p>No. Las sesiones están pensadas para que cualquier persona pueda comprenderlas, sin conocimientos previos. Yo te guío en cada paso.</p></div>
                     </details>
-                    <details class="faq-item">
+                    <details class="pregunta" data-entra>
                         <summary>¿Qué información necesitás para mi Carta Natal o Revolución Solar?</summary>
-                        <p>Tu fecha de nacimiento, hora exacta y lugar. Si no tenés la hora, te oriento sobre cómo conseguirla.</p>
+                        <div class="pregunta-respuesta"><p>Tu fecha de nacimiento, hora exacta y lugar. Si no tenés la hora, te oriento sobre cómo conseguirla.</p></div>
                     </details>
-                    <details class="faq-item">
+                    <details class="pregunta" data-entra>
                         <summary>¿Cómo son las sesiones?</summary>
-                        <p>Son 100% online, por Zoom o videollamada de WhatsApp. Duran entre 60 y 90 minutos, en un espacio íntimo y respetuoso.</p>
+                        <div class="pregunta-respuesta"><p>Son 100% online, por Zoom o videollamada de WhatsApp. Duran entre 60 y 90 minutos, en un espacio íntimo y respetuoso.</p></div>
                     </details>
-                    <details class="faq-item">
+                    <details class="pregunta" data-entra>
                         <summary>¿Cómo agendo una sesión?</summary>
-                        <p>Escribime por WhatsApp o email. Te respondo a la brevedad para coordinar día, horario y forma de pago.</p>
+                        <div class="pregunta-respuesta"><p>Escribime por WhatsApp o email. Te respondo a la brevedad para coordinar día, horario y forma de pago.</p></div>
                     </details>
-                    <details class="faq-item">
+                    <details class="pregunta" data-entra>
                         <summary>¿Puedo regalar una sesión?</summary>
-                        <p>¡Sí! Las sesiones pueden regalarse. Contactame y armamos juntas el regalo perfecto.</p>
+                        <div class="pregunta-respuesta"><p>¡Sí! Las sesiones pueden regalarse. Contactame y armamos juntas el regalo perfecto.</p></div>
                     </details>
                 </div>
-            </div>
-        </section>
-
-        <!-- CTA final -->
-        <section class="cta-banner">
-            <div class="container cta-inner">
-                <h2>¿Lista para comenzar tu viaje?</h2>
-                <p>Te acompaño a transitar tu propio camino con consciencia y herramientas concretas.</p>
-                <a href="Views/contacto.html" class="btn btn-light">Quiero agendar una sesión</a>
             </div>
         </section>
 
     </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-inner">
-            <div class="footer-col footer-brand">
-                <a href="#inicio" class="footer-brand-link">
-                    <img src="Imgs/imagen astrologa.png" alt="" class="footer-logo">
-                    <span class="footer-brand-name">María Astro Coach</span>
+    <!-- Pie -->
+    <footer class="pie">
+        <div class="contenedor pie-grilla">
+            <div class="pie-marca">
+                <a href="#inicio" class="marca marca--pie">
+                    <img src="Imgs/logo-128.webp" alt="" width="48" height="48" class="marca-sello" loading="lazy">
+                    <span class="marca-nombre">María Astro Coach</span>
                 </a>
-                <p class="footer-tagline">Acompañante en el proceso del Ser. Astrología y coaching ontológico para tu camino evolutivo.</p>
+                <p>Acompañante en el proceso del Ser. Astrología y coaching ontológico para tu camino evolutivo.</p>
             </div>
 
-            <div class="footer-col">
-                <h4 class="footer-title">Navegación</h4>
-                <nav class="footer-nav" aria-label="Pie de página">
-                    <a href="#inicio">Inicio</a>
-                    <a href="#servicios">Servicios</a>
-                    <a href="#sobre-mi">Sobre mí</a>
-                    <a href="#faq">Preguntas</a>
-                </nav>
-            </div>
+            <nav class="pie-nav" aria-label="Pie de página">
+                <a href="#servicios">Servicios</a>
+                <a href="#proceso">Cómo funciona</a>
+                <a href="#sobre-mi">Sobre mí</a>
+                <a href="#preguntas">Preguntas</a>
+            </nav>
 
-            <div class="footer-col">
-                <h4 class="footer-title">Contacto</h4>
-                <div class="footer-contact">
-                    <a href="https://wa.me/5491563504385" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> +54 9 11 6350-4385</a>
-                    <a href="mailto:Mariainesb@hotmail.com.ar"><i class="fas fa-envelope"></i> Mariainesb@hotmail.com.ar</a>
-                </div>
+            <div class="pie-contacto">
+                <a href="https://wa.me/5491163504385" target="_blank" rel="noopener"><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"/></svg> +54 9 11 6350-4385</a>
+                <a href="mailto:Mariainesb@hotmail.com.ar"><svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg> Mariainesb@hotmail.com.ar</a>
             </div>
         </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <p>&copy; 2025 María Astro Coach. Todos los derechos reservados.</p>
-            </div>
+        <div class="contenedor pie-final">
+            <p>&copy; <span data-anio>2026</span> María Astro Coach. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <a class="wa-flotante" id="wa-flotante" href="https://wa.me/5491163504385" target="_blank" rel="noopener" aria-label="Escribir a María por WhatsApp">
+        <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
+    </a>
+
+    <script src="js/hero-animado.js" defer></script>
+    <script src="js/main.js" defer></script>
 </body>
 </html>
