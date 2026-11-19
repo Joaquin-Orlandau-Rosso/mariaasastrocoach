@@ -265,31 +265,31 @@ button {
     background: rgba(29, 67, 81, 0.08);
 }
 
-.menu-reservar {
+.menu-contacto {
     margin-left: 10px;
     border: 1px solid currentColor;
     opacity: 1;
 }
 
-.menu-reservar:hover {
+.menu-contacto:hover {
     background: var(--crema);
     color: var(--noche);
     border-color: var(--crema);
 }
 
-.cabecera.solida .menu-reservar {
+.cabecera.solida .menu-contacto {
     background: var(--noche-2);
     border-color: var(--noche-2);
     color: var(--crema);
 }
 
-.cabecera.solida .menu-reservar:hover,
-.cabecera.solida .menu-link.menu-reservar.activo {
+.cabecera.solida .menu-contacto:hover,
+.cabecera.solida .menu-link.menu-contacto.activo {
     background: var(--noche);
     color: var(--crema);
 }
 
-.menu-link.menu-reservar.activo {
+.menu-link.menu-contacto.activo {
     background: var(--crema);
     color: var(--noche);
 }
@@ -482,7 +482,7 @@ button {
 
 .encabezado h2,
 .sobre-texto h2,
-.consulta-intro h2,
+.contacto-intro h2,
 .preguntas-intro h2 {
     font-size: clamp(2.05rem, 4vw, 3.15rem);
 }
@@ -552,7 +552,7 @@ button {
     display: flex;
     flex-wrap: wrap;
     gap: 8px 22px;
-    margin: 22px 0 24px;
+    margin-top: 22px;
     font-size: 0.92rem;
     color: var(--tinta-suave);
 }
@@ -565,24 +565,6 @@ button {
 
 .servicio-datos .ico {
     color: var(--turquesa-osc);
-}
-
-.servicio-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    padding: 6px 0;
-    font-weight: 700;
-    color: var(--turquesa-osc);
-    border-bottom: 1px solid currentColor;
-}
-
-.servicio-link .ico {
-    transition: transform 0.35s var(--curva);
-}
-
-.servicio-link:hover .ico {
-    transform: translateX(4px);
 }
 
 /* ---------- Cómo funciona ---------- */
@@ -751,293 +733,119 @@ html:not(.js) .paso::after {
     text-wrap: balance;
 }
 
-/* ---------- Consulta ---------- */
-.consulta {
+/* ---------- Contacto ---------- */
+.contacto {
     background: var(--bruma);
 }
 
-.consulta-grilla {
+.contacto-grilla {
     display: grid;
     grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
     gap: 64px;
-    align-items: start;
+    align-items: center;
 }
 
-.consulta-intro h2 {
+.contacto-intro h2 {
     margin-bottom: 20px;
 }
 
-.consulta-intro > p {
+.contacto-intro > p {
     color: var(--tinta-suave);
     max-width: 44ch;
 }
 
-.consulta-intro .consulta-ayuda {
-    margin-top: 14px;
-}
-
-.consulta-canales {
-    margin-top: 36px;
-    border-bottom: 1px solid var(--linea);
-}
-
-.consulta-canales li {
-    border-top: 1px solid var(--linea);
-}
-
-.consulta-canales a,
-.consulta-regalo {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 16px 0;
-    overflow-wrap: anywhere;
-}
-
-.consulta-canales .ico {
-    width: 22px;
-    height: 22px;
-    color: var(--turquesa-osc);
-}
-
-.consulta-canales strong {
-    display: block;
-    font-size: 0.82rem;
-    font-weight: 700;
-    color: var(--tinta-suave);
-}
-
-.consulta-canales a:hover span {
-    color: var(--turquesa-osc);
-}
-
-.consulta-regalo {
-    color: var(--tinta-suave);
-    font-size: 0.95rem;
-}
-
-.formulario {
-    background: var(--papel);
-    border: 1px solid rgba(29, 67, 81, 0.1);
-    border-radius: 24px;
-    padding: 36px;
-    box-shadow: 0 32px 64px -40px rgba(22, 50, 59, 0.45);
-}
-
-.campo {
-    display: grid;
-    gap: 8px;
-    margin-bottom: 20px;
-    min-width: 0;
-}
-
-fieldset.campo {
-    border: 0;
-}
-
-.campo > label,
-.campo > legend {
-    font-weight: 700;
-    font-size: 0.95rem;
-}
-
-.campo > legend {
-    float: left;
-    width: 100%;
-    margin-bottom: 10px;
-}
-
-.campo > legend + * {
-    clear: both;
-}
-
-.opcional {
-    font-weight: 400;
-    color: var(--tinta-suave);
-}
-
-.formulario input[type='text'],
-.formulario input[type='date'],
-.formulario input[type='time'],
-.formulario textarea {
-    display: block;
-    width: 100%;
-    min-height: 50px;
-    padding: 12px 14px;
-    font-size: 1rem;
-    background: #fff;
-    border: 1px solid #c4d0d2;
-    border-radius: 12px;
-    transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.formulario input[type='date'],
-.formulario input[type='time'] {
-    -webkit-appearance: none;
-    appearance: none;
-}
-
-.formulario input::-webkit-date-and-time-value {
-    text-align: left;
-}
-
-.formulario textarea {
-    resize: vertical;
-    min-height: 96px;
-}
-
-.formulario input:focus,
-.formulario textarea:focus {
-    outline: none;
-    border-color: var(--turquesa-osc);
-    box-shadow: 0 0 0 3px rgba(76, 142, 157, 0.22);
-}
-
-.formulario input:disabled {
-    opacity: 0.45;
-}
-
-.formulario ::placeholder {
-    color: #8a979b;
-}
-
-.opciones {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.opcion {
-    position: relative;
-}
-
-.opcion input {
-    position: absolute;
-    opacity: 0;
-    inset: 0;
-    margin: 0;
-    cursor: pointer;
-}
-
-.opcion span {
-    display: inline-flex;
-    align-items: center;
-    min-height: 44px;
-    padding: 0 18px;
-    border: 1px solid #c4d0d2;
-    border-radius: 999px;
-    background: #fff;
-    font-size: 0.95rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
-}
-
-.opcion:hover span {
-    border-color: var(--turquesa-osc);
-}
-
-.opcion input:checked + span {
-    background: var(--noche-2);
-    border-color: var(--noche-2);
-    color: var(--crema);
-}
-
-.opcion input:focus-visible + span {
-    outline: 2px solid var(--turquesa);
-    outline-offset: 3px;
-}
-
-.tilde {
+.contacto-intro .contacto-regalo {
     display: flex;
     align-items: center;
     gap: 10px;
-    margin: -4px 0 20px;
+    margin-top: 22px;
     font-weight: 600;
-    font-size: 0.95rem;
-    cursor: pointer;
-    width: fit-content;
+    color: var(--tinta);
 }
 
-.tilde input {
-    width: 18px;
-    height: 18px;
-    accent-color: var(--noche-2);
+.contacto-regalo .ico {
+    width: 20px;
+    height: 20px;
+    color: var(--turquesa-osc);
 }
 
-.tilde--chica {
-    margin: -6px 0 14px;
-    font-weight: 500;
-    color: var(--tinta-suave);
-}
-
-.nacimiento {
-    padding: 18px 18px 4px;
-    border-radius: 16px;
-    background: #f1f5f4;
-}
-
-.nacimiento[hidden] {
-    display: none;
-}
-
-.nacimiento .campo {
-    margin-bottom: 14px;
-}
-
-.nacimiento-fila {
+.canales {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 12px;
+    gap: 16px;
 }
 
-.vista-previa {
-    margin: 4px 0 24px;
+.canal {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 26px 28px;
+    background: var(--papel);
+    border: 1px solid rgba(29, 67, 81, 0.1);
+    border-radius: 22px;
+    box-shadow: 0 28px 56px -40px rgba(22, 50, 59, 0.5);
+    transition: border-color 0.3s, transform 0.4s var(--curva);
 }
 
-.vista-previa-titulo {
-    font-size: 0.82rem;
+.canal:hover {
+    border-color: rgba(43, 102, 118, 0.45);
+    transform: translate3d(0, -3px, 0);
+}
+
+.canal-icono {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--noche-2);
+    color: var(--crema);
+}
+
+.canal-icono svg {
+    width: 26px;
+    height: 26px;
+}
+
+.canal-icono--wa {
+    background: #1f8f55;
+}
+
+.canal-texto {
+    display: grid;
+    gap: 2px;
+    min-width: 0;
+    flex: 1;
+}
+
+.canal-nombre {
+    font-size: 0.85rem;
     font-weight: 700;
     color: var(--tinta-suave);
-    margin-bottom: 8px;
 }
 
-.vista-previa-texto {
-    padding: 14px 16px;
-    border-radius: 16px 16px 16px 4px;
-    background: #e3efe9;
-    font-size: 0.93rem;
-    line-height: 1.55;
-    white-space: pre-line;
+.canal-dato {
+    font-family: var(--serif);
+    font-size: clamp(1.15rem, 2vw, 1.45rem);
+    color: var(--tinta);
     overflow-wrap: anywhere;
 }
 
-.formulario-acciones {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 14px 22px;
+.canal-nota {
+    margin-top: 4px;
+    font-size: 0.92rem;
+    color: var(--tinta-suave);
 }
 
-.btn-whatsapp {
-    background: var(--noche-2);
-    color: var(--crema);
-    border: 0;
-}
-
-.btn-whatsapp:hover {
-    background: var(--noche);
-}
-
-.btn-whatsapp .ico {
-    width: 20px;
-    height: 20px;
-}
-
-.formulario-mail {
-    font-weight: 600;
+.canal-flecha {
+    width: 22px;
+    height: 22px;
     color: var(--turquesa-osc);
-    border-bottom: 1px solid currentColor;
+    transition: transform 0.35s var(--curva);
+}
+
+.canal:hover .canal-flecha {
+    transform: translateX(4px);
 }
 
 /* ---------- Preguntas ---------- */
@@ -1350,8 +1158,8 @@ fieldset.campo {
         color: var(--oro);
     }
 
-    .menu-reservar,
-    .cabecera.solida .menu-reservar {
+    .menu-contacto,
+    .cabecera.solida .menu-contacto {
         margin: 22px 0 0;
         padding: 14px 30px;
         font-family: var(--sans);
@@ -1362,10 +1170,10 @@ fieldset.campo {
         color: var(--noche);
     }
 
-    .menu-reservar:hover,
-    .cabecera.solida .menu-reservar:hover,
-    .cabecera .menu-link.menu-reservar.activo,
-    .cabecera.solida .menu-link.menu-reservar.activo {
+    .menu-contacto:hover,
+    .cabecera.solida .menu-contacto:hover,
+    .cabecera .menu-link.menu-contacto.activo,
+    .cabecera.solida .menu-link.menu-contacto.activo {
         background: var(--crema);
         color: var(--noche);
     }
@@ -1424,7 +1232,7 @@ fieldset.campo {
     }
 
     .sobre-grilla,
-    .consulta-grilla,
+    .contacto-grilla,
     .preguntas-grilla {
         grid-template-columns: minmax(0, 1fr);
         gap: 48px;
@@ -1508,9 +1316,18 @@ fieldset.campo {
         margin-top: 36px;
     }
 
-    .formulario {
-        padding: 24px 18px;
-        border-radius: 20px;
+    .canal {
+        padding: 20px 18px;
+        gap: 16px;
+    }
+
+    .canal-icono {
+        width: 48px;
+        height: 48px;
+    }
+
+    .canal-flecha {
+        display: none;
     }
 
     .pie-grilla {
@@ -1524,23 +1341,9 @@ fieldset.campo {
     }
 }
 
-@media (max-width: 400px) {
-    .nacimiento-fila {
-        grid-template-columns: minmax(0, 1fr);
-        gap: 0;
-    }
-
-    .nacimiento .nacimiento-fila .campo {
-        margin-bottom: 14px;
-    }
-
-    .opcion span {
-        padding: 0 14px;
-    }
-}
-
 @media (hover: none) {
-    .servicio:hover .servicio-glifo {
+    .servicio:hover .servicio-glifo,
+    .canal:hover {
         transform: none;
     }
 }

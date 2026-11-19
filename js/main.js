@@ -2,7 +2,6 @@
     'use strict';
 
     var WHATSAPP = '5491163504385';
-    var EMAIL = 'Mariainesb@hotmail.com.ar';
 
     var $ = function (sel, raiz) { return (raiz || document).querySelector(sel); };
     var $$ = function (sel, raiz) { return Array.prototype.slice.call((raiz || document).querySelectorAll(sel)); };
@@ -153,145 +152,28 @@
         });
     });
 
-    // ---------- Formulario: arma el mensaje para WhatsApp o email ----------
-    var form = $('#formulario');
-    if (form) {
-        var NOMBRES = {
-            'carta-natal': 'Carta Natal',
-            'revolucion-solar': 'Revolución Solar',
-            'coaching': 'Coaching Ontológico'
-        };
-        var nacimiento = $('#nacimiento');
-        var nacimientoTitulo = $('#nacimiento-titulo');
-        var regalo = $('#f-regalo');
-        var fecha = $('#f-fecha');
-        var hora = $('#f-hora');
-        var sinHora = $('#f-sin-hora');
-        var previa = $('#vista-previa');
-        var linkMail = $('#enviar-mail');
-
-        var dos = function (n) { return (n < 10 ? '0' : '') + n; };
-        var hoy = new Date();
-        fecha.max = hoy.getFullYear() + '-' + dos(hoy.getMonth() + 1) + '-' + dos(hoy.getDate());
-
-        // "1990-03-12" → "12/03/1990" sin pasar por Date (evita el corrimiento de un día).
-        // Fuera de rango (antes de 1900 o en el futuro) no se manda.
-        var fechaLinda = function (v) {
-            var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(v || '');
-            if (!m || v < fecha.min || v > fecha.max) return '';
-            return m[3] + '/' + m[2] + '/' + m[1];
-        };
-        var valor = function (nombre) {
-            var el = form.elements[nombre];
-            return el && el.value ? String(el.value).trim() : '';
-        };
-        var servicioElegido = function () {
-            var r = form.querySelector('input[name="servicio"]:checked');
-            return r ? r.value : '';
-        };
-        var esAstro = function (s) { return s === 'carta-natal' || s === 'revolucion-solar'; };
-
-        var armarMensaje = function () {
-            var servicio = servicioElegido();
-            var nombre = valor('nombre');
-            var esRegalo = regalo.checked;
-            var lineas = [nombre ? '¡Hola, María! Soy ' + nombre + '.' : '¡Hola, María!'];
-
-            if (NOMBRES[servicio]) {
-                lineas.push(esRegalo
-                    ? 'Quiero regalar una sesión de ' + NOMBRES[servicio] + '.'
-                    : 'Me interesa una sesión de ' + NOMBRES[servicio] + '.');
-            } else if (servicio === 'no-se') {
-                lineas.push(esRegalo
-                    ? 'Quiero regalar una sesión y me gustaría que me ayudes a elegir cuál.'
-                    : 'Me gustaría que me orientes sobre qué sesión me conviene.');
-            } else {
-                lineas.push(esRegalo
-                    ? 'Quiero regalar una sesión. ¿Me contás cómo es?'
-                    : 'Quería consultarte por tus sesiones.');
-            }
-
-            if (esAstro(servicio)) {
-                var f = fechaLinda(valor('fecha'));
-                var h = sinHora.checked ? 'no la sé exacta' : valor('hora');
-                var l = valor('lugar');
-                if (f || h || l) {
-                    lineas.push('');
-                    lineas.push(esRegalo ? 'Datos de nacimiento de quien lo recibe:' : 'Mis datos de nacimiento:');
-                    if (f) lineas.push('• Fecha: ' + f);
-                    if (h) lineas.push('• Hora: ' + h);
-                    if (l) lineas.push('• Lugar: ' + l);
-                }
-            }
-
-            var mensaje = valor('mensaje');
-            if (mensaje) {
-                lineas.push('');
-                lineas.push(mensaje);
-            }
-            return lineas.join('\n');
-        };
-
-        var actualizar = function () {
-            nacimiento.hidden = !esAstro(servicioElegido());
-            nacimientoTitulo.textContent = regalo.checked
-                ? 'Datos de nacimiento de quien lo recibe'
-                : 'Tus datos de nacimiento';
-            hora.disabled = sinHora.checked;
-            var texto = armarMensaje();
-            previa.textContent = texto;
-            linkMail.href = 'mailto:' + EMAIL +
-                '?subject=' + encodeURIComponent('Consulta desde la web') +
-                '&body=' + encodeURIComponent(texto);
-        };
-
-        form.addEventListener('input', actualizar);
-        form.addEventListener('change', actualizar);
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-            var url = 'https://wa.me/' + WHATSAPP + '?text=' + encodeURIComponent(armarMensaje());
-            var ventana = window.open(url, '_blank');
-            if (ventana) ventana.opener = null;
-            else window.location.href = url;
-        });
-
-        // Los links de cada servicio dejan elegida esa sesión en el formulario.
-        $$('[data-servicio]').forEach(function (a) {
-            a.addEventListener('click', function () {
-                var r = form.querySelector('input[name="servicio"][value="' + a.getAttribute('data-servicio') + '"]');
-                if (r) {
-                    r.checked = true;
-                    actualizar();
-                }
-            });
-        });
-
-        actualizar();
-        form.hidden = false;
-    }
-
     // ---------- WhatsApp flotante: aparece después del hero ----------
     var flotante = $('#wa-flotante');
     var hero = $('.hero');
-    var consulta = $('#consulta');
+    var contacto = $('#contacto');
     if (flotante && hero && 'IntersectionObserver' in window) {
         flotante.href = 'https://wa.me/' + WHATSAPP + '?text=' +
             encodeURIComponent('¡Hola, María! Quería consultarte por tus sesiones.');
         var enHero = true;
-        var enConsulta = false;
+        var enContacto = false;
         var refrescar = function () {
-            flotante.classList.toggle('visible', !enHero && !enConsulta);
+            flotante.classList.toggle('visible', !enHero && !enContacto);
         };
         // -100px arriba: lo que queda tapado por la cabecera no cuenta como visible.
         new IntersectionObserver(function (e) {
             enHero = e[0].isIntersecting;
             refrescar();
         }, { rootMargin: '-100px 0px 0px 0px' }).observe(hero);
-        if (consulta) {
+        if (contacto) {
             new IntersectionObserver(function (e) {
-                enConsulta = e[0].isIntersecting;
+                enContacto = e[0].isIntersecting;
                 refrescar();
-            }, { rootMargin: '-100px 0px -30% 0px' }).observe(consulta);
+            }, { rootMargin: '-100px 0px -30% 0px' }).observe(contacto);
         }
     }
 

@@ -95,7 +95,7 @@
                     <li><a href="#proceso" class="menu-link">Cómo funciona</a></li>
                     <li><a href="#sobre-mi" class="menu-link">Sobre mí</a></li>
                     <li><a href="#preguntas" class="menu-link">Preguntas</a></li>
-                    <li><a href="#consulta" class="menu-link menu-reservar">Reservar sesión</a></li>
+                    <li><a href="#contacto" class="menu-link menu-contacto">Contacto</a></li>
                 </ul>
             </nav>
         </div>
@@ -118,7 +118,7 @@
                         Encontrá claridad y dirección a través de la astrología y el coaching ontológico.
                     </p>
                     <div class="hero-acciones" data-entra data-orden="4">
-                        <a href="#consulta" class="btn btn-crema">Reservá tu sesión</a>
+                        <a href="#contacto" class="btn btn-crema">Escribime</a>
                         <a href="#servicios" class="btn btn-linea">Ver servicios</a>
                     </div>
                     <ul class="hero-datos" data-entra data-orden="5">
@@ -174,7 +174,6 @@
                                 <li><svg class="ico" aria-hidden="true"><use href="#i-video"/></svg> Online · Zoom o WhatsApp</li>
                                 <li><svg class="ico" aria-hidden="true"><use href="#i-persona"/></svg> Sesión individual</li>
                             </ul>
-                            <a href="#consulta" class="servicio-link" data-servicio="carta-natal">Reservar Carta Natal <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a>
                         </div>
                     </article>
 
@@ -200,7 +199,6 @@
                                 <li><svg class="ico" aria-hidden="true"><use href="#i-video"/></svg> Online · Zoom o WhatsApp</li>
                                 <li><svg class="ico" aria-hidden="true"><use href="#i-calendario"/></svg> Ideal cerca de tu cumpleaños</li>
                             </ul>
-                            <a href="#consulta" class="servicio-link" data-servicio="revolucion-solar">Reservar Revolución Solar <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a>
                         </div>
                     </article>
 
@@ -225,7 +223,6 @@
                                 <li><svg class="ico" aria-hidden="true"><use href="#i-video"/></svg> Online · Zoom o WhatsApp</li>
                                 <li><svg class="ico" aria-hidden="true"><use href="#i-proceso"/></svg> Procesos individuales</li>
                             </ul>
-                            <a href="#consulta" class="servicio-link" data-servicio="coaching">Reservar Coaching <svg class="ico" aria-hidden="true"><use href="#i-flecha"/></svg></a>
                         </div>
                     </article>
                 </div>
@@ -285,7 +282,7 @@
                         <li>Reflexión</li>
                         <li>Desarrollo personal</li>
                     </ul>
-                    <a href="#consulta" class="btn btn-tinta" data-entra data-orden="4">Agendar una consulta</a>
+                    <a href="#contacto" class="btn btn-tinta" data-entra data-orden="4">Agendar una consulta</a>
                 </div>
             </div>
 
@@ -295,102 +292,41 @@
             </blockquote>
         </section>
 
-        <!-- Consulta -->
-        <section id="consulta" class="seccion consulta">
-            <div class="contenedor consulta-grilla">
-                <div class="consulta-intro">
+        <!-- Contacto -->
+        <section id="contacto" class="seccion contacto">
+            <div class="contenedor contacto-grilla">
+                <div class="contacto-intro">
                     <h2 data-entra>¿Lista para comenzar tu viaje?</h2>
                     <p data-entra data-orden="1">
                         Escribime para más información sobre mis servicios o para agendar
                         una consulta personalizada. Respondo a la brevedad.
                     </p>
-                    <p class="consulta-ayuda" data-entra data-orden="2">
-                        Elegí la sesión y, si es de astrología, sumá tus datos de nacimiento:
-                        así ya los tengo para preparar tu encuentro.
+                    <p class="contacto-regalo" data-entra data-orden="2">
+                        <svg class="ico" aria-hidden="true"><use href="#i-regalo"/></svg>
+                        Las sesiones también se pueden regalar.
                     </p>
-
-                    <ul class="consulta-canales" data-entra data-orden="3">
-                        <li>
-                            <a href="https://wa.me/5491163504385" target="_blank" rel="noopener">
-                                <svg class="ico" aria-hidden="true"><use href="#i-whatsapp"/></svg>
-                                <span><strong>WhatsApp</strong> +54 9 11 6350-4385</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="mailto:Mariainesb@hotmail.com.ar">
-                                <svg class="ico" aria-hidden="true"><use href="#i-mail"/></svg>
-                                <span><strong>Email</strong> Mariainesb@hotmail.com.ar</span>
-                            </a>
-                        </li>
-                        <li class="consulta-regalo">
-                            <svg class="ico" aria-hidden="true"><use href="#i-regalo"/></svg>
-                            <span>Las sesiones también se pueden regalar.</span>
-                        </li>
-                    </ul>
                 </div>
 
-                <!-- Arranca oculto: lo muestra main.js recién cuando el envío por WhatsApp está listo. -->
-                <form class="formulario" id="formulario" data-entra data-orden="1" novalidate hidden>
-                    <fieldset class="campo">
-                        <legend>¿Qué sesión te interesa?</legend>
-                        <div class="opciones">
-                            <label class="opcion"><input type="radio" name="servicio" value="carta-natal"><span>Carta Natal</span></label>
-                            <label class="opcion"><input type="radio" name="servicio" value="revolucion-solar"><span>Revolución Solar</span></label>
-                            <label class="opcion"><input type="radio" name="servicio" value="coaching"><span>Coaching Ontológico</span></label>
-                            <label class="opcion"><input type="radio" name="servicio" value="no-se"><span>Todavía no lo sé</span></label>
-                        </div>
-                    </fieldset>
-
-                    <div class="campo">
-                        <label for="f-nombre">Tu nombre</label>
-                        <input id="f-nombre" name="nombre" type="text" autocomplete="given-name" placeholder="Cómo te llamás">
-                    </div>
-
-                    <label class="tilde">
-                        <input type="checkbox" name="regalo" id="f-regalo">
-                        <span>Es para regalar</span>
-                    </label>
-
-                    <fieldset class="campo nacimiento" id="nacimiento" hidden>
-                        <legend id="nacimiento-titulo">Tus datos de nacimiento</legend>
-                        <div class="nacimiento-fila">
-                            <div class="campo">
-                                <label for="f-fecha">Fecha</label>
-                                <input id="f-fecha" name="fecha" type="date" min="1900-01-01">
-                            </div>
-                            <div class="campo">
-                                <label for="f-hora">Hora</label>
-                                <input id="f-hora" name="hora" type="time">
-                            </div>
-                        </div>
-                        <label class="tilde tilde--chica">
-                            <input type="checkbox" name="sin-hora" id="f-sin-hora">
-                            <span>No sé la hora exacta</span>
-                        </label>
-                        <div class="campo">
-                            <label for="f-lugar">Lugar</label>
-                            <input id="f-lugar" name="lugar" type="text" autocomplete="off" placeholder="Ciudad, provincia y país">
-                        </div>
-                    </fieldset>
-
-                    <div class="campo">
-                        <label for="f-mensaje">¿Algo que quieras contarme? <span class="opcional">(opcional)</span></label>
-                        <textarea id="f-mensaje" name="mensaje" rows="3" placeholder="Qué te moviliza, qué te gustaría trabajar…"></textarea>
-                    </div>
-
-                    <div class="vista-previa">
-                        <p class="vista-previa-titulo">Así le llega tu mensaje a María</p>
-                        <p class="vista-previa-texto" id="vista-previa" aria-live="polite"></p>
-                    </div>
-
-                    <div class="formulario-acciones">
-                        <button type="submit" class="btn btn-whatsapp">
-                            <svg class="ico" aria-hidden="true"><use href="#i-whatsapp"/></svg>
-                            Enviar por WhatsApp
-                        </button>
-                        <a class="formulario-mail" id="enviar-mail" href="mailto:Mariainesb@hotmail.com.ar">o enviarlo por email</a>
-                    </div>
-                </form>
+                <div class="canales" data-entra data-orden="1">
+                    <a class="canal" href="https://wa.me/5491163504385?text=%C2%A1Hola%2C%20Mar%C3%ADa!%20Quer%C3%ADa%20consultarte%20por%20tus%20sesiones." target="_blank" rel="noopener">
+                        <span class="canal-icono canal-icono--wa"><svg aria-hidden="true"><use href="#i-whatsapp"/></svg></span>
+                        <span class="canal-texto">
+                            <span class="canal-nombre">WhatsApp</span>
+                            <span class="canal-dato">+54 9 11 6350-4385</span>
+                            <span class="canal-nota">La forma más rápida. Te respondo en minutos durante el día.</span>
+                        </span>
+                        <svg class="ico canal-flecha" aria-hidden="true"><use href="#i-flecha"/></svg>
+                    </a>
+                    <a class="canal" href="mailto:Mariainesb@hotmail.com.ar">
+                        <span class="canal-icono"><svg aria-hidden="true"><use href="#i-mail"/></svg></span>
+                        <span class="canal-texto">
+                            <span class="canal-nombre">Email</span>
+                            <span class="canal-dato">Mariainesb@hotmail.com.ar</span>
+                            <span class="canal-nota">Para consultas más extensas. Te respondo en menos de 24 hs.</span>
+                        </span>
+                        <svg class="ico canal-flecha" aria-hidden="true"><use href="#i-flecha"/></svg>
+                    </a>
+                </div>
             </div>
         </section>
 
@@ -399,7 +335,7 @@
             <div class="contenedor preguntas-grilla">
                 <div class="preguntas-intro">
                     <h2 data-entra>Preguntas frecuentes</h2>
-                    <p data-entra data-orden="1">¿Te quedó otra duda? <a href="#consulta">Escribime</a> y lo hablamos.</p>
+                    <p data-entra data-orden="1">¿Te quedó otra duda? <a href="#contacto">Escribime</a> y lo hablamos.</p>
                 </div>
 
                 <div class="preguntas-lista">
